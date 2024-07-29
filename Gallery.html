@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <style>
+            body 
+            {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+                background-image: url("Images/darkbg.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+            body.light-mode 
+            {
+                background-image: url("Images/lightbg.jpg");
+            }
+            .theme-button 
+            {
+                background-color: white; 
+                border: none; 
+                padding: 5px; 
+                display: inline-block; 
+                margin:  0 2px; 
+                cursor: pointer; 
+                border-radius: 50%; 
+                transition: background-color 0.3s ease;
+                position: relative;
+                text-decoration: none;
+            }
+            body.light-mode .theme-button 
+            {
+                background-color: #440847;  
+            }
+            body.light-mode .navbar , body.light-mode .navbar-item , body.light-mode .fit , body.light-mode .navbar div , body.light-mode .navbar h2 , body.light-mode .p1
+            {
+                background-color: white;
+                color: purple;  
+            }
+            body.light-mode .container  {
+                background-color: rgba(255,255,255,0.5);
+                color: purple; 
+            }
+            body.light-mode .i1 
+            {
+                background-color: #fadced;
+            }
+            body.light-mode .navbar-item .subnav , body.light-mode .subnav-item
+            {
+                background-color: #fadced;
+                color: purple;
+            }
+            img.i
+            {
+                width:30px;
+                height:30px;
+                border-radius: 50%; 
+                object-fit: cover;
+            }
+            .navbar 
+            {
+                background-color: #440847;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 50px;
+                z-index: 1000;
+                box-sizing: border-box;
+            }
+            .navbar h2
+            {
+                max-height: 60px; 
+                max-width: 120px; 
+                object-fit: contain;
+                margin-left: 2%;
+                margin-right: 5%;
+                text-align: center;
+                color:white;
+            }
+            .navbar div 
+            {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background-color: #440847;
+            }
+            .navbar-item 
+            {
+                color: white;
+                cursor: pointer;
+                position: relative;
+                text-decoration: none;
+                margin-right: 7px;
+            }
+            .navbar-item .subnav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                color: white;
+                background-color: #6b1e61;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                min-width: 160px;
+            }
+            .subnav-item {
+                color: #fff;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: block;
+                white-space: nowrap;
+            }
+            .navbar-item:hover .subnav {
+                display: block;
+            }
+            .fit{
+                background-color: #440847;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                color: white;
+            }
+            .container
+            {
+                background-color: rgba(68, 8, 71,0.5);
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 35%;
+                left: 50%; 
+                transform: translate(-50%, -30%);
+                width: 1200px;
+                height: 450px;
+                color: white;
+                border-radius: 2%; 
+            }
+            .i1
+            {
+                width:150px;
+                height:150px;
+                border-radius: 10%; 
+                padding: 10px 10px;
+                background-color: #6b1e61;
+                margin: 0 25px;
+            }
+            .c1 {
+                margin: 5px 35px; 
+            }
+            .c2 {
+                margin: 15px 50px;
+                font-size: 20px ;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function changeTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <h2>Gallery</h2>
+                    <div>
+                    <div class="navbar-item">
+                        <a href="index.html" class="navbar-item">Home</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Contact.html" class="navbar-item">Contact</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Connect.html" class="navbar-item">Connect</a>
+                    </div>
+                    <div class="navbar-item ">
+                        PortFolio
+                        <div class="subnav">
+                            <a href="Education.html" class="subnav-item">Education</a>
+                            <a href="Experience.html" class="subnav-item">Experience</a>
+                            <a href="Skills.html" class="subnav-item">Skills</a>
+                            <a href="Projects.html" class="subnav-item">Projects</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Gallery.html" class="navbar-item">Gallery</a>
+                    </div>
+                    <div class="navbar-item"></div> 
+                        <button class="theme-button" onclick="changeTheme();"><img src="Images/toggle.png" class="i" alt="switch"></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <h2 align="center">My Photo World</h2>
+            <div class="c1">
+                <img src="Images/Img1.png" alt="My Img1" class="i1"/>
+                <img src="Images/Img2.png" alt="My Img2" class="i1"/>
+                <img src="Images/Img3.png" alt="My Img3" class="i1"/>
+                <img src="Images/Img4.png" alt="My Img4" class="i1"/>
+                <img src="Images/Img5.png" alt="My Img5" class="i1"/>    
+            </div>
+            <div class="c2">
+                <p>
+                    Welcome to My Photo World! <br>
+                    Here, I've captured moments from my life that reflect my journey and passions.<br>
+                    From serene views of riverfronts and peaceful gardens to the vibrant beauty of flowers in bloom,<br> 
+                    Each image holds a special memory. <br>
+                    These photos are a glimpse into my world.<br>
+                    I hope you enjoy browsing through these memories as much as I enjoyed living them.
+                </p>
+            </div>
+        </div>
+        <footer class="fit">
+            <pre align="center">CopyRight@2024 All Right Reserved</pre>
+        </footer>
+    </body>
+</html>

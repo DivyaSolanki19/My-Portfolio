@@ -1,0 +1,235 @@
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <style>
+            body 
+            {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+                background-image: url("Images/darkbg.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+            body.light-mode 
+            {
+                background-image: url("Images/lightbg.jpg");
+            }
+            .theme-button 
+            {
+                background-color: white; 
+                border: none; 
+                padding: 5px; 
+                display: inline-block; 
+                margin:  0 2px; 
+                cursor: pointer; 
+                border-radius: 50%; 
+                transition: background-color 0.3s ease;
+                position: relative;
+                text-decoration: none;
+            }
+            body.light-mode .theme-button 
+            {
+                background-color: #440847;  
+            }
+            body.light-mode .navbar , body.light-mode .navbar-item , body.light-mode .fit , body.light-mode .navbar div , body.light-mode .navbar h2 
+            {
+                background-color: white;
+                color: purple;  
+            }
+            body.light-mode .i1 
+            {
+                background-color: #fadced;
+            } 
+            body.light-mode .navbar-item .subnav , body.light-mode .subnav-item 
+            {
+                background-color: #fadced;
+                color: purple;
+            }
+            body.light-mode .container 
+            {
+                background-color: rgba(255,255,255,0.5);
+                color: purple; 
+            }
+            img.i
+            {
+                width:30px;
+                height:30px;
+                border-radius: 50%; 
+                object-fit: cover;
+            }
+            .navbar 
+            {
+                background-color: #440847;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 50px;
+                z-index: 1000;
+                box-sizing: border-box;
+            }
+            .navbar h2
+            {
+                max-height: 60px; 
+                max-width: 120px; 
+                object-fit: contain;
+                margin-left: 2%;
+                margin-right: 5%;
+                text-align: center;
+                color:white;
+            }
+            .navbar div 
+            {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background-color: #440847;
+            }
+            .navbar-item 
+            {
+                color: white;
+                cursor: pointer;
+                position: relative;
+                text-decoration: none;
+                margin-right: 7px;
+            }
+            .navbar-item .subnav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                color: white;
+                background-color: #6b1e61;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                min-width: 160px;
+            }
+            .subnav-item {
+                color: #fff;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: block;
+                white-space: nowrap;
+            }
+            .navbar-item:hover .subnav {
+                display: block;
+            }
+            .fit{
+                background-color: #440847;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                color: white;
+            }
+            .container
+            {
+                background-color:  rgba(68, 8, 71,0.5);
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 35%;
+                left: 50%; 
+                transform: translate(-50%, -30%);
+                width: 1200px;
+                height: 450px;
+                color: white;
+                border-radius: 2%; 
+            }
+            .i1
+            {
+                width:80px;
+                height:80px;
+                border-radius: 20%; 
+                padding: 5px 5px;
+                background-color: #6b1e61;
+                margin: 5px 30px;
+            }
+            .c1 
+            {
+                margin: 10px 50px; 
+            }
+        </style>
+        <script>
+            function changeTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <h2>Skills</h2>
+                    <div>
+                    <div class="navbar-item">
+                        <a href="index.html" class="navbar-item">Home</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Contact.html" class="navbar-item">Contact</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Connect.html" class="navbar-item">Connect</a>
+                    </div>
+                    <div class="navbar-item ">
+                        PortFolio
+                        <div class="subnav">
+                            <a href="Education.html" class="subnav-item">Education</a>
+                            <a href="Experience.html" class="subnav-item">Experience</a>
+                            <a href="Skills.html" class="subnav-item">Skills</a>
+                            <a href="Projects.html" class="subnav-item">Projects</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Gallery.html" class="navbar-item">Gallery</a>
+                    </div>
+                    <div class="navbar-item"></div> 
+                        <button class="theme-button" onclick="changeTheme();"><img src="Images/toggle.png" class="i" alt="switch"></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="c1">
+                <h3>Technical Skills</h3>
+                    <img src="Images/HTML5_logo.png" alt="HTML5 Logo" class="i1"/>
+                    <img src="Images/CSS3_logo.png" alt="CSS3 Logo" class="i1"/>
+                    <img src="Images/Javascript_logo.png" alt="JavaScript Logo" class="i1"/>
+                    <img src="Images/C_logo.png" alt="C Logo" class="i1"/>
+                    <img src="Images/C++_logo.png" alt="C++ Logo" class="i1"/>
+                    <img src="Images/Php_logo.png" alt="PHP Logo" class="i1"/>
+                    <img src="Images/Mysql_logo.png" alt="MySQL Logo" class="i1"/>
+                    <img src="Images/Java_logo.png" alt="Java Logo" class="i1"/>
+                    <img src="Images/Android_logo.png" alt="Android Logo" class="i1"/>
+                    <img src="Images/Python_logo.png" alt="Python Logo" class="i1"/>
+                    <img src="Images/JSP and Servlet_logo.png" alt="JSP and Servlet Logo" class="i1"/>
+                    <img src="Images/Spring_logo.png" alt="Spring Logo" class="i1"/>
+                    <img src="Images/AI_logo.jpg" alt="AI Logo" class="i1"/>
+                    <img src="Images/ML_logo.png" alt="ML Logo" class="i1"/>
+            </div>
+            <div class="c1">
+                <h3>Soft Skills</h3>
+                <img src="Images/Leader_logo.jpg" alt="Leader" class="i1"/>
+                <img src="Images/TM_logo.jpg" alt="Time Management" class="i1"/>
+                <img src="Images/Thinking_logo.jpg" alt="Analytical Thinking" class="i1"/>
+                <img src="Images/PS_logo.jpg" alt="Problrm Solving" class="i1"/>
+                <img src="Images/Oraganization_logo.jpg" alt="Organization" class="i1"/>
+                <img src="Images/Innovation_logo.jpg" alt="Innovation" class="i1"/>
+                <img src="Images/Teamwork_logo.jpg" alt="Team Work" class="i1"/>
+            </div>
+        </div>
+        <footer class="fit">
+            <pre align="center">CopyRight@2024 All Right Reserved</pre>
+        </footer>
+    </body>
+</html>

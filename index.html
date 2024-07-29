@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+                background-image: url("Images/lightbg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+            .navbar {
+                background-color: rgba(255, 255, 255, 0.7);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 50px;
+                z-index: 1000;
+                border-radius: 0;
+                color: purple;
+                box-sizing: border-box;
+            }
+            .navbar h2{
+                max-height: 60px; 
+                max-width: 120px; 
+                object-fit: contain;
+                margin-left: 50px;
+                margin-right: 50px;
+                text-align: center;
+            }
+            .navbar div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .navbar-item {
+                margin-right: 7px;
+                color: purple;
+                cursor: pointer;
+                position: relative;
+                text-decoration: none;
+            }
+            .navbar-item .subnav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                color: purple;
+                background-color: #fadced;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                min-width: 160px;
+            }
+            .subnav-item {
+                color: purple;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: block;
+                white-space: nowrap;
+            }
+            .navbar-item:hover .subnav {
+                display: block;
+            }
+            .fit{
+                background-color: rgba(255, 255, 255, 0.7);
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                color: purple;
+            }
+            .c1 {
+                margin: 5px 2px; 
+                align-items: center;
+                padding: 0 2px;
+                position: fixed;
+                top: 33%;
+                left: 35%; 
+                transform: translate(-50%, -30%);
+                width: 700px;
+                height: 300px;
+                color: white;
+                border-radius: 2%; 
+            }
+            .c2 {
+                margin: 5px 5px; 
+                align-items: center;
+                position: fixed;
+                top: 35%;
+                left: 80%; 
+                transform: translate(-50%, -30%);
+                width: 300px;
+                height: 450px;
+                color: white;
+                border-radius: 7%; 
+                background-color: #fadced;
+            }
+            .p1 {
+                margin: 40px 10px;
+                font-size: 50px ;
+                text-align: left;
+                color:purple;
+            }
+            .p2 {
+                margin: 40px 10px;
+                font-size: 20px ;
+                text-align: left;
+                color:#6b1e61;
+                line-height: 30px;
+            }
+            .i1{
+                margin:22px;
+                top:40%;
+                height: 400;
+                width:250;
+                border-radius: 7%;
+            }
+            button
+            {
+                color:#6b1e61;
+                background-color: #fadced;
+                height: 35px;
+                width: 130px;
+                border-radius: 20% 30%;
+                font-size: 20px ;
+                border: 2px solid purple;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <h2>Home</h2>
+                    <div>
+                    <div class="navbar-item">
+                        <a href="index.html" class="navbar-item">Home</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Contact.html" class="navbar-item">Contact</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Connect.html" class="navbar-item">Connect</a>
+                    </div>
+                    <div class="navbar-item ">
+                        PortFolio
+                        <div class="subnav">
+                            <a href="Education.html" class="subnav-item">Education</a>
+                            <a href="Experience.html" class="subnav-item">Experience</a>
+                            <a href="Skills.html" class="subnav-item">Skills</a>
+                            <a href="Projects.html" class="subnav-item">Projects</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Gallery.html" class="navbar-item">Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="c1">
+            <p class="p1"> I'm <b>Divya Solanki</b>,<br> Web Developer </p> 
+            
+            <p class="p2">
+                Welcome to my portfolio! I'm Divya, a passionate <b> Web Developer </b>
+                <br>with expertise in Java Spring Boot, PHP, full stack development and AI/ML. 
+                <br>My latest project <b>EcoExplorer</b>, is a chatbot for eco-friendly products.
+                <br>I am dedicated to creating innovative, user-friendly applications.
+            </p>
+            <a href="ContactMe.html"><button><b>Contact Me</b></button></a>
+        </div>
+        <div class="c2">
+            <img src="Images/D.jpg" alt="My Img" class="i1"/>
+        </div>
+        <footer class="fit">
+            <pre align="center">CopyRight@2024 All Right Reserved</pre>
+        </footer>
+    </body>
+</html>

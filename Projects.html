@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <style>
+            body 
+            {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+                background-image: url("Images/darkbg.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+            body.light-mode 
+            {
+                background-image: url("Images/lightbg.jpg");
+            }
+            .theme-button 
+            {
+                background-color: white; 
+                border: none; 
+                padding: 5px; 
+                display: inline-block; 
+                margin:  0 2px; 
+                cursor: pointer; 
+                border-radius: 50%; 
+                transition: background-color 0.3s ease;
+                position: relative;
+                text-decoration: none;
+            }
+            body.light-mode .theme-button 
+            {
+                background-color: #440847;  
+            }
+            body.light-mode .navbar , body.light-mode .navbar-item , body.light-mode .fit , body.light-mode .navbar div , body.light-mode .navbar h2  
+            {
+                background-color: white;
+                color: purple;  
+            }
+            body.light-mode .E , body.light-mode h2 , body.light-mode h4 , body.light-mode p
+            {
+                color: purple;  
+            }
+            body.light-mode h3
+            {
+                color: #440847;  
+            }
+            body.light-mode .c1 , body.light-mode .c2 , body.light-mode .c3 , body.light-mode .c4 , body.light-mode .c5
+            {
+                background-color: rgba(255,255,255,0.5);
+            }
+            body.light-mode .navbar-item .subnav , body.light-mode .subnav-item
+            {
+                background-color: #fadced;
+                color: purple;
+            }
+            img.i
+            {
+                width:30px;
+                height:30px;
+                border-radius: 50%; 
+                object-fit: cover;
+            }
+            .navbar 
+            {
+                background-color: #440847;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 50px;
+                z-index: 1000;
+                box-sizing: border-box;
+            }
+            .navbar h2
+            {
+                max-height: 60px; 
+                max-width: 120px; 
+                object-fit: contain;
+                margin-left: 2%;
+                margin-right: 5%;
+                text-align: center;
+                color:white;
+            }
+            .navbar div 
+            {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background-color: #440847;
+            }
+            .navbar-item 
+            {
+                color: white;
+                cursor: pointer;
+                position: relative;
+                text-decoration: none;
+                margin-right: 7px;
+            }
+            .navbar-item .subnav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                color: white;
+                background-color: #6b1e61;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                min-width: 160px;
+            }
+            .subnav-item {
+                color: #fff;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: block;
+                white-space: nowrap;
+            }
+            .navbar-item:hover .subnav {
+                display: block;
+            }
+            .fit{
+                background-color: #440847;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                color: white;
+            }
+            .E{
+                top:25%;
+                left:50%;
+                color: white;
+            }
+            .container
+            {
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 35%;
+                left: 50%; 
+                transform: translate(-50%, -30%);
+                width: 1200px;
+                height: 450px;
+                border-radius: 2%; 
+            }
+            .container h3
+            {
+                color:#fadced;
+            }
+            .c1 
+            {
+                background-color: rgba(68, 8, 71,0.5);
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 30%;
+                left: 10%; 
+                transform: translate(-50%, -30%);
+                width: 200px;
+                height: 220px;
+                color: white;
+                border-radius: 2%;  
+            }
+            .c2 
+            {
+                background-color: rgba(68, 8, 71,0.5);
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 40%;
+                left: 30%; 
+                transform: translate(-50%, -30%);
+                width: 200px;
+                height: 200px;
+                color: white;
+                border-radius: 2%;  
+            }
+            .c3
+            {
+                background-color: rgba(68, 8, 71,0.5);
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 50%;
+                left: 50%; 
+                transform: translate(-50%, -30%);
+                width: 200px;
+                height: 200px;
+                color: white;
+                border-radius: 2%;  
+            }
+            .c4
+            {
+                background-color: rgba(68, 8, 71,0.5);
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 60%;
+                left: 70%; 
+                transform: translate(-50%, -30%);
+                width: 200px;
+                height: 200px;
+                color: white;
+                border-radius: 2%;  
+            }
+            .c5
+            {
+                background-color: rgba(68, 8, 71,0.5);
+                align-items: center;
+                padding: 0 20px;
+                position: fixed;
+                top: 70%;
+                left: 90%; 
+                transform: translate(-50%, -30%);
+                width: 200px;
+                height: 220px;
+                color: white;
+                border-radius: 2%;  
+            }
+        </style>
+        <script>
+            function changeTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <h2>Projects</h2>
+                    <div>
+                    <div class="navbar-item">
+                        <a href="index.html" class="navbar-item">Home</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Contact.html" class="navbar-item">Contact</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Connect.html" class="navbar-item">Connect</a>
+                    </div>
+                    <div class="navbar-item ">
+                        PortFolio
+                        <div class="subnav">
+                            <a href="Education.html" class="subnav-item">Education</a>
+                            <a href="Experience.html" class="subnav-item">Experience</a>
+                            <a href="Skills.html" class="subnav-item">Skills</a>
+                            <a href="Projects.html" class="subnav-item">Projects</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="Gallery.html" class="navbar-item">Gallery</a>
+                    </div>
+                    <div class="navbar-item"></div> 
+                        <button class="theme-button" onclick="changeTheme();"><img src="Images/toggle.png" class="i" alt="switch"></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <h1 align="center" class="E">Projects</h1>
+            <div class="c1">
+                <h3>!Incredible Gujarat Yatra</h3>
+                <img src="Images/IGY.png" height="130px" width="200px" alt="!Incredible Gujarat Yatra Home Page"/>
+            </div>
+            <div class="c2">
+                <h3>Medicant</h3>
+                <img src="Images/Medicant.png" height="130px" width="200px" alt="Medicant Home Page"/>
+            </div>
+            <div class="c3">
+                <h3>City On Tap</h3>
+                <img src="Images/COT.png" height="130px" width="200px" alt=" City On Tap Home Page"/>
+            </div>
+            <div class="c4">
+                <h3>Eco Explorer</h3>
+                <a href="https://web-chat.global.assistant.watson.appdomain.cloud/preview.html?backgroundImageURL=https%3A%2F%2Fau-syd.assistant.watson.cloud.ibm.com%2Fpublic%2Fimages%2Fupx-22f45698-1dda-4140-a823-b6e6aaac1f3e%3A%3A793b3947-d58a-43cc-8d33-1399ee1b2d18&integrationID=a20c01c1-cad9-4699-9f9e-6c5ea073d02d&region=au-syd&serviceInstanceID=22f45698-1dda-4140-a823-b6e6aaac1f3e" target="_blank"> 
+                    <img src="Images/EcoExplorer.png" height="130px" width="200px" alt="Eco Explorer Home Page"/>
+                </a> 
+            </div>
+            <div class="c5">
+                <h3>Gym Management System</h3>
+                <a href="https://github.com/DivyaSolanki19/gymManagementSystem" target="_blank">
+                    <img src="Images/GMS.png" height="130px" width="200px" alt="Gym Management System Home Page"/>
+                </a> 
+            </div>
+        </div>
+        <footer class="fit">
+            <pre align="center">CopyRight@2024 All Right Reserved</pre>
+        </footer>
+    </body>
+</html>
